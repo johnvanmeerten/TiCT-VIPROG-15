@@ -5,6 +5,6 @@ def partition (x):
     for naam in x:
         if naam[0] in 'ABCDEFGHIJKLM':
             TMPlst.append(naam)
-            return TMPlst
+    return TMPlst
 
-print(partition(x))
+print(partition(lst))
