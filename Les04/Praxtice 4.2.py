@@ -1,4 +1,4 @@
 def optellen (x):
-    return(sum(optellen(x)))
+    return(sum(x))
 
-print(optellen(34))
+print(optellen([3123,123,13]))
