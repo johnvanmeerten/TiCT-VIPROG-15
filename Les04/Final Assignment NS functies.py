@@ -1,27 +1,35 @@
+afstandKM = eval(input("hoe veel km is je reis: "))
+leeftijd = eval(input("wat is je leeftijd, antwoord in een cijfer: "))
+weekendrit = input("is het weekend? antwoord met ja of nee: ")
 def standaardprijs(afstandKM):
-    prijs = 0
-    if afstandKM > 50:
-        prijs = 15 + (afstandKM-50)*0.60        #long ride
-    elif afstandKM > 0:
-        prijs = 0.80*afstandKM                  #normal method
+
+    if afstandKM <= 100:
+        standaardprijs = 0.80 * afstandKM
+        return standaardprijs
+    elif afstandKM > 100:
+            standaardprijs = 15 + (0.60 * afstandKM)
+            return standaardprijs
+    elif afstandKM < 0:
+        standaardprijs = 0
+
+standaardprijs(afstandKM)
+
+def ritprijs(leeftijd, weekendrit, standaardprijs):
+
+    if weekendrit == "ja" and leeftijd >= 65 or leeftijd <= 12 :
+        korting = (standaardprijs / 100) * 35
+        print(korting)
+        print( standaardprijs - korting)
+
+    elif weekendrit == "nee" and leeftijd >=65 or leeftijd <= 12 :
+        korting = (standaardprijs / 100) * 30
+        print(korting)
+        print( standaardprijs - korting)
+    elif weekendrit == "ja" and leeftijd <= 65 or leeftijd >=12 :
+        korting = (standaardprijs / 100) * 40
+        print(korting)
+        print( standaardprijs - korting)
     else:
-        prijs = 0                               #negative number. ignore.
-    return prijs
+        return "je hebt geen recht op korting, je moet ", standaardprijs,"betalen"
 
-
-def ritprijs(leeftijd, weekendrit, afstandKM):
-    if weekendrit:
-        if leeftijd < 12 or leeftijd >= 65:
-            prijs = standaardprijs(afstandKM) * 0.65
-        else:
-            prijs = standaardprijs(afstandKM) * 0.60
-    else:
-        if leeftijd < 12 or leeftijd >= 65:
-            prijs = standaardprijs(afstandKM) * 0.70
-        else:
-            prijs = standaardprijs(afstandKM)
-
-    return '€ ' + str(round(prijs,2))
-
-
-print(ritprijs(eval(input("Leeftijd: ")), eval(input("Weekendrit? ")), eval(input("Afstand in KM: "))))
+print(ritprijs):(leeftijd,weekendrit,standaardprijs(afstandKM)))
