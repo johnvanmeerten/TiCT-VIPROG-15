@@ -1,5 +1,8 @@
 def kwadraten_som(x):
-    for getallen in x:
-        print()
+    for getallen in (x):
+        if getallen >= 0:
+            return getallen*getallen
 
-#Bespreken
+print((kwadraten_som([4234, 432])))
+
+#bespreken
