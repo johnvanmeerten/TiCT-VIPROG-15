@@ -11,3 +11,4 @@ for regel in inhoud:
      print(hoogste)
 
 
+#Afmaken / bespreken
