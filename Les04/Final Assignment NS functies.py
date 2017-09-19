@@ -1,6 +1,7 @@
 afstandKM = eval(input("hoe veel km is je reis: "))
 leeftijd = eval(input("wat is je leeftijd, antwoord in een cijfer: "))
 weekendrit = input("is het weekend? antwoord met ja of nee: ")
+
 def standaardprijs(afstandKM):
 
     if afstandKM <= 100:
