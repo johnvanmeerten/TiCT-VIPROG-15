@@ -13,3 +13,6 @@ minuten = 15
 
 print('{} {} {}'.format(weekdag, dag, maand))
 print('{} {} {} om {}.{} uur'.format(weekdag, dag, maand, uur, minuten))
+
+for i in range(1, 8):
+    print('{} {:2} {:3}'. format (i, i**2, 2**i))
