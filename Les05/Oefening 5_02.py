@@ -1,2 +1,3 @@
-s = 'voorbeeld'
-print(s.find('e'))
+s = 'dit-is-een-voorbeeld'
+
+print(s.split('-'))
