@@ -1,4 +1,4 @@
-infile = open('kaartnummers.txt', 'r')
+# infile = open('kaartnummers.txt', 'r')
 inhoud = infile.readlines()
 infile.close()
 
