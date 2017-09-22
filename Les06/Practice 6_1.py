@@ -1,0 +1,2 @@
+def seizoen ():
+    if getal >

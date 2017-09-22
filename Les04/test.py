@@ -1,4 +1,3 @@
-woord = "hallo"
+s = 23, 43, 54, 543, 53
 
-for letter in woord:
-    print(letter)
+print(s.split('-'))
