@@ -4,22 +4,18 @@ def ticker(filename):
     newdect = {}
 
     for bedrijf in bedrijven:
-        data = bedrijf.split(':')
-        newdect[data[0]] = data[1]
-    file.close()
+        dataregel = bedrijf.split(':')
+        sleutel = dataregel[0]
+        waarden = dataregel[1].strip()
+        newdect[sleutel] = waarden
     return newdect
 
-def ticker1(newdect, input):
-    for tick in newdect:
-        if input == tick:
-            print('Ticker Symbol: {}'.format(newdect[tick]))
-        elif newdect[tick] == input:
-            print('Company name: {}'.format(tick))
+
+tickerbestand = ticker('Beurs.txt')
 
 
-newdect = ticker('Beurs.txt')
+bedrijfsnaam = input('Geef naam van bedrijf: ')
 
-invoer = input('Hallo: ')
-
-ticker1(newdect, invoer)
-
+for bedrijf in tickerbestand:
+    if bedrijfsnaam == bedrijf:
+        print(tickerbestand[bedrijf])
