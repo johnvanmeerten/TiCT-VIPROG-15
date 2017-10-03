@@ -8,9 +8,28 @@ def toon_aantal_kluizen_vrij():
 
 
 def nieuwe_kluis():
-    infile = open('kluisjes.txt', 'r')
+    kluisnummers = []
+    for i in range(1, 13):
+            kluisnummers.append(i)
+
+    infile = open('kluizen.txt', 'r')
     kluizendata = infile.readlines()
     infile.close()
+
+    for kluis in kluizendata:
+        gegevensvan1kluis = kluis.split(';')
+        stringnummer = gegevensvan1kluis[0]
+        nummer = int(stringnummer)
+        kluisnummers.remove(nummer)
+    if len(kluisnummers) > 0:
+        nieuwkluisnummer = kluisnummers[0];
+        print('Je kluisnummer is {}'.format(nieuwkluisnummer))
+        code = input('Voer een code in: ')
+        outfile = open('kluizen.txt', 'a')
+        outfile.write('{};{}\n'.format(nieuwkluisnummer, code))
+        outfile.close()
+    else:
+        print('Er is geen kluis meer beschikbaar')
 
 
 def kluis_openen():
@@ -46,11 +65,4 @@ elif keuze == 2:
 else:
     kluis_openen()
 
-
-
-# def toon_aantal_kluizen_vrij():
-#     filenaam = open('kluisjes.txt', 'r')
-#     regels = filenaam.readlines()
-#     filenaam.close()
-#     print(12 - len(regels))
 
