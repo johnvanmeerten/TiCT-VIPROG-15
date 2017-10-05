@@ -34,4 +34,4 @@ afkomst = input('Waar komt u vandaan? ')
 passagiers = naam_leeftijd()
 
 for passagier in passagiers:
-    print('Uw naam is {} en u bent {} jaren oud. \n De kosten voor uw ticket zijn {}'.format(passagier[0], passagier[1], prijs(passagier[1],breken_afstand(afkomst, waarheen))))
+    print('Uw naam is {} en u bent {} jaren oud. \n De kosten voor uw ticket zijn {:.2f}'.format(passagier[0], passagier[1], prijs(passagier[1],breken_afstand(afkomst, waarheen))))
