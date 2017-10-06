@@ -12,6 +12,6 @@ def code (invoerstring):
     return nieuwestring
 
 
-
-uitvoerstring = code(naam, beginS, eindS)
+gebcomstring = naam+beginS+eindS
+uitvoerstring = code(gebcomstring)
 print(uitvoerstring)
