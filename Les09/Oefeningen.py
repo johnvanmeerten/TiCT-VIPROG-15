@@ -20,9 +20,7 @@ for woord in woorden:
     else:
         continue
 
-print('Hogeschool', end=' ')
+    print('Hogeschool', end=' ')
 
-# Graag verder vanaf deze vraag doornemen, wat zijn de juiste antwoorden en waarom.
 
-# Hoe herken ik de verschillende type soorten. Hoe herken ik een str, floud of een tulp, wat zijn de ken merken.
 

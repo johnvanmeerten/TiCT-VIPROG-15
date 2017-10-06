@@ -3,3 +3,5 @@ dict = {'Tim':8.2, 'Bob':7.2, 'Sanne':9.4, 'Ana':9.4, 'John':9.8, 'Pim':4.2, 'El
 for naam, cijfer in dict.items():
     if cijfer > 9:
         print(naam, cijfer)
+
+print(dict['Tim'])
