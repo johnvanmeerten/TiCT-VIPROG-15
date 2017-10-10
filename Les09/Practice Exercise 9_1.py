@@ -17,3 +17,5 @@ try:
     print("De kosten per persoon zijn €",per_persoon)
 except:
     print("Onjuiste invoer!")
+
+
