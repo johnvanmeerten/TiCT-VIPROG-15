@@ -12,7 +12,7 @@ def nieuwe_kluis():
     for i in range(1, 13):
             kluisnummers.append(i)
 
-    infile = open('kluizen.txt', 'r')
+    infile = open('kluisjes.txt', 'r')
     kluizendata = infile.readlines()
     infile.close()
 
